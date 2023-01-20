@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Login & Registration Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style7.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+     
+ <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <%- include('navbar.ejs') %>
+    <form action="/retail/register" method="post">
+      <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+          <div class="card login-card">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="images/elderly_care.jpg" alt="login" class="login-card-img">
+                <p class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
+                </p>
+              </div>
+
+              <div class="col-md-7">
+                <div class="card-body">
+                  <div class="brand-wrapper">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                  </div>
+                  <a href="/retail/register" class="forgot-password-link">Register as a Retailer</a>
+                  <p class="login-card-description">Register your account</p>
+                  <!-- <form action="/" method='post'> -->
+                  <div class="form-group">
+                    <label for="text" class="sr-only" style="color: black;">Username</label>
+                    <input type="text" name="name" id="text" class="form-control" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="sr-only" style="color: black;">Email</label>
+                    <input type="number" name="phone" id="email" class="form-control" placeholder="Phone number">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="sr-only" style="color: black;">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="***********">
+                  </div>
+                  <span style="color: red;">
+                    <%= (typeof message !="undefined" ? message : "" ) %>
+                  </span>
+
+                  <span style="color: red;">
+                    <%= (typeof fields !="undefined" ? fields : "" ) %>
+                  </span>
+                  <span style="color: red;">
+                    <%= (typeof error !="undefined" ? error : "" ) %>
+                  </span>
+                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Register">
+                  <!-- </form> -->
+                  <p class="login-card-footer-text">Have an account? <a href="/retail/login" class="text-reset">Jump To Login</a>
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </form>
+
+
+  </body>
+
+  </html>

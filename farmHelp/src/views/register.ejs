@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login & Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        body{
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <%- include('navbar.ejs') %>
+
+    <form action="/register" method="post">
+      <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container" >
+          <div class="card login-card" style="border-radius: 20px; height: 550px;
+          width: 1200px;
+          margin: 0 auto;
+          background: #f2f2f2;">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="img/f3.jpg" alt="login" class="login-card-img" style="width: 100%;
+                height: 550px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;">
+                <p class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
+                </p>
+              </div>
+
+              <div class="col-md-7">
+                <div class="card-body">
+                  <div class="brand-wrapper">
+                  </div>
+                  <p class="login-card-description" style="text-align: center;
+                  font-size: 30px;
+                  margin-top: 10px;">Register your account</p>
+                  <hr>
+                  <!-- <form action="/" method='post'> -->
+                  <div class="form-group" style="margin-top: 30px;">
+                    <p>Username : 
+                    <input type="text" name="name" id="text" class="form-control">
+                    </p>
+                  </div>
+                  <div class="form-group">
+                   <p>Phone : 
+                    <input type="tel" name="phone" id="phone" class="form-control" >
+                    </p>
+                  </div>
+                  <div class="form-group mb-4">
+                    <p>Password:
+                    <input type="password" name="password" id="password" class="form-control" >
+                    </p>
+                  </div>
+                  <input name="login" id="login" class="btn btn-block login-btn mb-4" style="margin: 0 auto;
+                  border-radius: 10px;
+                  border: 1px solid black;
+                  background: #008CBA;
+                  font-family: 'Nunito', sans-serif;
+                  color: #fff;" type="submit" value="Register">
+                  <!-- </form> -->
+                  <p class="login-card-footer-text" style="text-align: center;";">Have an account? <a href="/login" class="text">Jump To Login</a>
+                    <br>
+                    <a href="/retail/register" class="forgot-password-link" style="top: 30px;">Register as a Retailer</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </form>
+
+
+  </body>
+
+  </html>

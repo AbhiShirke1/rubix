@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        body{
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+
+</head>
+
+<body>
+    <%- include('navbar.ejs') %>
+
+    <form action="/retail/login" method="post">
+        <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+            <div class="container">
+                <div class="card login-card" style="border-radius: 20px;
+                height: 500px;
+                width: 1000px;
+                margin: 0 auto;
+                background: #f2f2f2;">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img src="img/f4.jpg" alt="login" class="login-card-img" style="width: 100%;
+                            height: 500px;
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;">
+                            <p
+                                class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
+                            </p>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <p class="login-card-description" style="text-align: center;
+                                font-size: 30px;
+                                margin-top: 10px;">Sign into your account</p>
+                                <hr>
+                                <form action="/" method='post'>
+                                    <div class="form-group mb-4" style="margin-top: 30px;">
+                                        <p>Userame : 
+                                        <input type="text" name="name" id="password" class="form-control">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Phone : 
+                                        <input type="tel" name="phone" id="email" class="form-control" >
+                                            </p>
+                                    </div>
+                                    <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit"
+                                        value="Login" style="border-radius: 10px;
+                                        border: 1px solid black;
+                                        background: #008CBA;
+                                        margin-top: 30px;">
+                                </form>
+                                <a href="/ctLogin" class="forgot-password-link">Login as a Retailer</a>
+                                <p class="login-card-footer-text">Don't have an account? <a href="/register"
+                                        class="text">Register here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </form>
+</body>
+
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+      a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class ="logo" style="margin-left: -30px;"><a href="/">FarmFund</a></div>
+            <ul class="links" style="margin-top: 14px;">
+              <li><a href="/">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a>
+              <li><a href="/fform">Post</a></li>
+              <li><a href="/profile">Profile</a></li>
+            </ul>
+            <span style="color: white;">Welcome <%= (typeof name != "undefined" ? name : "") %></span> 
+            <a href="/register" class="abtn">SignUp/Login</a>
+          </div>
+          
+        </nav>
+      </div>
+</body>
+</html>
